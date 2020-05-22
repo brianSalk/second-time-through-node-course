@@ -50,7 +50,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('other', {
         title: 'my site',
-        name: 'still brian salkas'
+        name: 'brian salkas'
     })
 })
 
