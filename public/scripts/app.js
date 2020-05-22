@@ -6,7 +6,7 @@ const paragraphTwo = document.querySelector('#message-2')
 
 wordForm.addEventListener('submit', e => {
 
-    fetch('http://localhost:3000/wordofday').then(response => {
+    fetch('/wordofday').then(response => {
     response.json().then(data => {
         if (data.error){
             return paragraphTwo.textContent = data.error

@@ -10,6 +10,8 @@ const viewsPath = path.join(__dirname, '../templates/views')
 
 // use takes arg of static assets path
 app.use(express.static(assets_path))
+// set up port
+const port = process.env.PORT || 3000
 // set tells express to look for something.
 app.set('view engine', 'hbs')
 // used to rename the views directory
@@ -61,7 +63,7 @@ app.get('/*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('your server is up and running on port 3000')
+app.listen(port, () => {
+    console.log('your server is up and running on port ' + port)
 })
 
